@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
+
+:root {
+  --background-color-main: #191E24;
+  --background-color-aside: #232832;
+  --background-color-input: #373c47;
+  --text-color: #EEEEEE;
+  --text-sm-color: #999999;
+  --primary-color: #00f;
+  --secondary-color: #be3c3c;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--background-color-main);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  width: 800px;
+}
+
+.container h1 {
+  font-weight: bold;
+  font-size: 40px;
+  font-size-adjust: 0.38;
+  width: 310px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.analog, .digital {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* RELÓGIO ANALÓGICO */
+.analog {
+  margin-right: 30px;
+}
+
+/* O corpo do relógio */
+.circle {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  border: 8px double var(--text-sm-color);
+  background-color: var(--background-color-aside);
+  border-radius: 100%;
+}
+
+/* Os traços das horas e minutos */
+.dash {
+  width: inherit;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dash15 {
+  transform: rotate(15deg);
+  position: absolute;
+  width: inherit;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dash30 {
+  transform: rotate(30deg);
+  position: absolute;
+  width: inherit;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dash45 {
+  transform: rotate(45deg);
+  position: absolute;
+  width: inherit;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dash60 {
+  transform: rotate(60deg);
+  position: absolute;
+  width: inherit;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dash75 {
+  transform: rotate(75deg);
+  position: absolute;
+  width: inherit;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dash90 {
+  transform: rotate(90deg);
+  position: absolute;
+  width: inherit;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dash105 {
+  transform: rotate(105deg);
+  position: absolute;
+  width: inherit;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dash120 {
+  transform: rotate(120deg);
+  position: absolute;
+  width: inherit;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dash135 {
+  transform: rotate(135deg);
+  position: absolute;
+  width: inherit;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dash150 {
+  transform: rotate(150deg);
+  position: absolute;
+  width: inherit;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dash165 {
+  transform: rotate(165deg);
+  position: absolute;
+  width: inherit;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dash div, .dash30 div, .dash60 div, .dash90 div, .dash120 div, .dash150 div{
+  border: 1px solid var(--text-color);
+  width: 20px;
+  margin: 0 8px;
+}
+
+.dash15 div, .dash45 div, .dash75 div, .dash105 div, .dash135 div, .dash165 div {
+  border: 1px solid var(--text-color);
+  width: 10px;
+  margin: 0 8px;
+}
+
+.dash div, .dash90 div{
+  width: 30px;
+}
+
+/* Os ponteiros do relógio */
+.pointers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+}
+
+.pointer-hours, .pointer-minutes, .pointer-seconds, .pointer-center {
+  position: absolute;
+}
+
+.pointer-ring {
+  border: 1px solid var(--primary-color);
+  border-radius: 100%;
+  width: 210px;
+  height: 210px;
+}
+
+.pointer-hours {
+  transform: rotate(0deg);
+  transform-origin: left;
+  border: 3px solid var(--text-color);
+  border-top-right-radius: 100%;
+  border-bottom-right-radius: 100%;
+  width: 70px;
+  margin-left: 70px;
+}
+
+.pointer-minutes {
+  transform: rotate(0deg);
+  transform-origin: left;
+  border: 2px solid var(--text-color);
+  border-top-right-radius: 100%;
+  border-bottom-right-radius: 100%;
+  width: 100px;
+  margin-left: 100px;
+}
+
+.pointer-seconds {
+  transform: rotate(0deg);
+  transform-origin: left;
+  border: 1px solid var(--secondary-color);
+  
+  width: 85px;
+  margin-left: 85px;
+}
+
+.pointer-center {
+  background-color: var(--background-color-input);
+  border: 7px double var(--text-color);
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+}
+
+.digital {
+  margin-left: 30px;
+}
+
+.square {
+  font-family: "Orbitron", Arial;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color-aside);
+  padding: 20px;
+  border: 3px solid var(--text-sm-color);
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.square .hour {
+  font-size: 40px;
+  text-align: center;
+  width: 220px;
+  margin-bottom: 10px;
+}
+
+.square .week {
+  padding: 0 10px 2px;
+  border-bottom: 1px solid var(--text-sm-color);
+}
+
+.square .date {
+  font-size: 14px;
+  margin-top: 2px;
+}
+
+footer {
+  font-size-adjust: 16px;
+  font-size-adjust: 0.43;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-sm-color);
+  margin-top: 30px;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+footer a:hover {
+  opacity: 0.9;
+}
